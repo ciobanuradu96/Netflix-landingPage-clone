@@ -1,0 +1,160 @@
+/* Global Styles */
+
+:root{
+    --primary-color:#e50914;
+    --dark-color: #141414;
+	--light-color: #f4f4f4;
+}
+
+* {
+	box-sizing: border-box; 
+    /*border-box means that padding and border are included in the width and height */
+	margin: 0;
+	padding: 0;
+}
+
+body{
+    font-family: 'Arial',sans-serif;
+    -webkit-font-smoothing: antialiased;
+    /* Webkit is a web browser rendering engine used by Safari and Chrome (among others, but these are the popular ones).
+    The -webkit prefix on CSS selectors are properties that only this engine is intended to process, very similar to -moz properties */
+    background: #000;
+	color: #999;
+}
+
+ul{
+    list-style: none;
+}
+
+h1,h2,h3,h4{
+    color:#fff;
+}
+
+a{
+    color:#fff;
+    text-decoration: none;
+}
+
+p{
+    margin: 0.5rem 0;
+}
+
+img{
+    width: 100%;
+}
+
+.showcase{
+    width: 100%;
+    height: 88vh;
+    background: url('./Images/background.jpg') center/cover  no-repeat;
+    position: relative;
+}
+/* Insert content after every showcase class element, and style the inserted content: */
+.showcase::after{
+    content: "";
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.6);
+    box-shadow: inset 0px 40px 200px #000000,inset 0px -40px 200px #000000;
+    /* set shadow inside of the box with inset 0px horziontal  40 vertical and 200 blur */
+
+}
+.showcase-top{
+    
+    position:relative;
+    height:50px;
+    z-index: 2;
+    
+}
+.showcase-top img{
+    width: 130px;
+    position:absolute;
+    top: 50%;
+    left: 5%;
+}
+.showcase-top select{
+    background: transparent;
+    color: var(--light-color);
+    padding: 2px 2px;
+}
+.showcase-top div{
+    position:absolute;
+    right: 5%;
+    top:50%;
+}
+
+.showcase-content{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin:auto;
+    margin-top: 10rem;
+    width: 80vh;
+    z-index: 2;
+}
+
+.showcase-content h1{
+    font-size: 5rem;
+    font-weight: 700;
+}
+
+.showcase-content p{
+    font-size: 1.6rem;
+    color: var(--light-color);
+    margin: 1rem 0rem;
+}
+
+.showcase-content .input-form{
+    width: 100%;
+    height: 5rem;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    margin:auto;
+}
+
+.input-form input{
+    width: 60%;
+    padding: 20px 20px ;
+}
+
+.input-form .btn{
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35%;
+    font-weight: 500;
+}
+
+.input-form .btn svg{
+    height: 30px;
+
+}
+
+.section-1 .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 7px  solid rgba(128, 128, 128, 0.3);
+    border-bottom: 7px  solid rgba(128, 128, 128, 0.3);
+}
+
+/* Utility */
+
+.btn{
+    background: var(--primary-color);
+    padding: 0.4rem 1.2rem;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.btn-xl{
+    font-size: 2.3rem;
+}
